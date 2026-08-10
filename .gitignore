@@ -1,0 +1,30 @@
+__pycache__/
+*.py[cod]
+*$py.class
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Ignore processed images
+src/processed_images/*
+!src/processed_images/.gitkeep
+
+# Ignore testing and results if they are just outputs
+results/*
+!results/.gitkeep
+Testting/
+
+# Ignore all large model files to prevent GitHub rejection
+model/*.pkl
+model/*.pth
+model/*.h5
+
+# Keep the one specific model we are using in app.py
+!model/model_70_128D_30_3Class.pkl
+
+.vscode/
+.DS_Store
