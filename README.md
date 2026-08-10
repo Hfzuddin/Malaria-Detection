@@ -1,62 +1,61 @@
 # Malaria Detection System
 
-Sistem ini adalah sebuah aplikasi berasaskan web untuk mengesan parasit Malaria di dalam imej sel darah (Blood Smear Scans) menggunakan model *Convolutional Neural Network (CNN)* dan *Support Vector Machine (SVM)*.
+This is a web-based application designed to detect Malaria parasites in blood smear images using a Convolutional Neural Network (CNN) and Support Vector Machine (SVM) AI model.
 
-Aplikasi ini menggunakan:
+This application uses:
 - **Backend:** Python & Flask
-- **Frontend:** React, TailwindCSS (menggunakan Babel Standalone & CDN)
-- **AI Model:** PyTorch (EfficientNet)
+- **Frontend:** React, TailwindCSS (via Babel Standalone & CDN)
+- **AI Model:** PyTorch (Hybrid EfficientNet)
 
-## Prasyarat
-Sebelum menggunakan sistem ini, pastikan komputer anda telah dipasang dengan:
-1. **Python 3.8** atau lebih baharu.
+## Prerequisites
+Before using this system, ensure your computer has the following installed:
+1. **Python 3.8** or newer.
 2. `pip` (Python package installer).
 
-## Cara Pemasangan (Kaedah Tradisional)
+## Installation (Traditional Method)
 
-1. **Muat turun kod sumber (Clone repository)**
-   Buka terminal/Command Prompt dan jalankan:
+1. **Clone the repository**
+   Open your terminal/Command Prompt and run:
    ```bash
    git clone https://github.com/Hfzuddin/Malaria-Detection.git
    cd "Malaria-Detection"
    ```
 
-2. **Pasang perpustakaan (Dependencies)**
-   Adalah sangat digalakkan untuk menggunakan *Virtual Environment*. Walau bagaimanapun, anda boleh terus memasang *requirements* dengan menaip:
+2. **Install dependencies**
+   It is highly recommended to use a Virtual Environment. However, you can directly install the requirements by running:
    ```bash
    pip install -r requirements.txt
    ```
 
-## Cara Pemasangan (Kaedah Docker - Disyorkan)
+## Installation (Docker Method - Recommended)
 
-Jika anda tidak mahu pening memasang Python atau perpustakaan satu persatu, anda boleh gunakan Docker.
-Pastikan **Docker Desktop** telah dipasang di komputer anda.
+If you prefer not to manually install Python or manage libraries, you can use Docker.
+Ensure **Docker Desktop** is installed on your machine.
 
-1. Buka terminal di dalam folder projek.
-2. Jalankan perintah berikut:
+1. Open a terminal in the project folder.
+2. Run the following command:
    ```bash
    docker-compose up -d
    ```
-3. Sistem akan secara automatik memuat turun sistem operasi, memasang requirements, dan menghidupkan server. Anda boleh terus buka pelayar web di `http://localhost:5500`.
+3. The system will automatically download the operating system environment, install dependencies, and start the server. You can immediately open your browser at `http://localhost:5500`.
 
+## Run the Application (Without Docker)
 
-## Cara Menjalankan Sistem (Run the Application)
-
-1. Masuk ke dalam folder `src`:
+1. Navigate to the `src` directory:
    ```bash
    cd src
    ```
 
-2. Jalankan pelayan (server) Flask:
+2. Start the Flask server:
    ```bash
    python app.py
    ```
 
-3. Buka pelayar web (browser) anda dan pergi ke pautan berikut:
+3. Open your web browser and go to the following link:
    **http://127.0.0.1:5500**
 
-## Cara Penggunaan
-1. Di halaman **Dashboard**, klik **Upload Image** atau **Upload Folder** untuk memuat naik imej sel darah (format JPG/PNG).
-2. Tekan butang **Analyze Images**. Sistem akan mengambil masa beberapa saat untuk memproses imej menggunakan model AI.
-3. Setelah selesai, anda akan dibawa ke halaman **Scanned Results** untuk melihat sama ada sel tersebut dijangkiti (Infected) atau bebas parasit (Uninfected).
-4. Keputusan lalu akan sentiasa disimpan secara automatik di dalam halaman ini.
+## Usage Guide
+1. On the **Dashboard** page, click **Upload Image** or **Upload Folder** to upload blood cell images (JPG/PNG format).
+2. Click the **Analyze Images** button. The system will take a few seconds to process the images using the AI model.
+3. Once completed, you will be redirected to the **Scanned Results** page to view whether the cell is Infected or Uninfected.
+4. Previous results are automatically saved and tracked on this page.
