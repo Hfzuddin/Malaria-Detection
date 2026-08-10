@@ -17,8 +17,8 @@ Sebelum menggunakan sistem ini, pastikan komputer anda telah dipasang dengan:
 1. **Muat turun kod sumber (Clone repository)**
    Buka terminal/Command Prompt dan jalankan:
    ```bash
-   git clone https://github.com/UsernameAnda/Malaria-Detection-System.git
-   cd "Malaria-Detection-System"
+   git clone https://github.com/Hfzuddin/Malaria-Detection.git
+   cd "Malaria-Detection"
    ```
 
 2. **Pasang perpustakaan (Dependencies)**
