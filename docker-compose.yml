@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+  malaria-app:
+    build: .
+    container_name: malaria-system
+    ports:
+      - "5500:5500"
+    volumes:
+      # Sync the src directory so that edits to the code show up immediately without rebuilding the image
+      - ./src:/app/src
+      # Sync the models directory so it can access the model
+      - ./model:/app/model
+    restart: unless-stopped

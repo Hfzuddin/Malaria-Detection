@@ -12,7 +12,7 @@ Sebelum menggunakan sistem ini, pastikan komputer anda telah dipasang dengan:
 1. **Python 3.8** atau lebih baharu.
 2. `pip` (Python package installer).
 
-## Cara Pemasangan (Installation)
+## Cara Pemasangan (Kaedah Tradisional)
 
 1. **Muat turun kod sumber (Clone repository)**
    Buka terminal/Command Prompt dan jalankan:
@@ -26,6 +26,19 @@ Sebelum menggunakan sistem ini, pastikan komputer anda telah dipasang dengan:
    ```bash
    pip install -r requirements.txt
    ```
+
+## Cara Pemasangan (Kaedah Docker - Disyorkan)
+
+Jika anda tidak mahu pening memasang Python atau perpustakaan satu persatu, anda boleh gunakan Docker.
+Pastikan **Docker Desktop** telah dipasang di komputer anda.
+
+1. Buka terminal di dalam folder projek.
+2. Jalankan perintah berikut:
+   ```bash
+   docker-compose up -d
+   ```
+3. Sistem akan secara automatik memuat turun sistem operasi, memasang requirements, dan menghidupkan server. Anda boleh terus buka pelayar web di `http://localhost:5500`.
+
 
 ## Cara Menjalankan Sistem (Run the Application)
 
