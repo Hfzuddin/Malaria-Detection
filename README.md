@@ -1,61 +1,95 @@
 # Malaria Detection System
 
-This is a web-based application designed to detect Malaria parasites in blood smear images using a Convolutional Neural Network (CNN) and Support Vector Machine (SVM) AI model.
+A web-based AI application designed to accurately detect and classify Malaria parasites in blood smear images using a custom Hybrid EfficientNet model. 
 
-This application uses:
-- **Backend:** Python & Flask
-- **Frontend:** React, TailwindCSS (via Babel Standalone & CDN)
-- **AI Model:** PyTorch (Hybrid EfficientNet)
+## 🌟 Features
+- **AI-Powered Analysis**: Utilizes a PyTorch-based Hybrid EfficientNet architecture to achieve high accuracy in detecting infected cells.
+- **Three-Class Classification**: Identifies cells as `INFECTED`, `UNINFECTED`, or `NON_BLOOD`.
+- **Fast and Accurate**: Processes both individual cell images and full blood slide scans.
+- **Visual Highlighting**: Automatically highlights the detected parasites in the image using computer vision techniques (OpenCV).
+- **Responsive UI**: A modern dashboard built with React and TailwindCSS.
 
-## Prerequisites
-Before using this system, ensure your computer has the following installed:
-1. **Python 3.8** or newer.
-2. `pip` (Python package installer).
+## 🛠️ Technology Stack
+- **Backend:** Python, Flask, Werkzeug
+- **AI Model:** PyTorch (Hybrid EfficientNet_B3), Scikit-Learn (SVM)
+- **Computer Vision:** OpenCV (`opencv-python`)
+- **Frontend:** React, TailwindCSS (CDN)
 
-## Installation (Traditional Method)
+## 📋 Prerequisites
+- **Git** (for cloning)
+- **Docker Desktop** (Recommended)
+- *OR* **Python 3.9+** (if running manually)
+
+---
+
+## 🚀 Getting Started
+
+You can run this application either using **Docker (Recommended)** or by running it manually using Python.
+
+### Option 1: Using Docker (Recommended & Easiest)
+Using Docker guarantees that all dependencies (including heavy libraries like OpenCV and PyTorch) are correctly installed without messing up your local environment.
 
 1. **Clone the repository**
-   Open your terminal/Command Prompt and run:
    ```bash
    git clone https://github.com/Hfzuddin/Malaria-Detection.git
-   cd "Malaria-Detection"
+   cd Malaria-Detection
    ```
 
-2. **Install dependencies**
-   It is highly recommended to use a Virtual Environment. However, you can directly install the requirements by running:
+2. **Start Docker Desktop** on your computer.
+
+3. **Run the Application**
+   Open your terminal in the project directory and run:
+   ```bash
+   docker-compose up -d --build
+   ```
+   *Note: The first time you run this, it may take several minutes to download the Python image and install the AI libraries.*
+
+4. **Access the Web App**
+   Open your browser and navigate to: [http://localhost:5500](http://localhost:5500)
+
+5. **Stop the Application**
+   ```bash
+   docker-compose down
+   ```
+
+### Option 2: Traditional Manual Installation (Without Docker)
+
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/Hfzuddin/Malaria-Detection.git
+   cd Malaria-Detection
+   ```
+
+2. **Create a Virtual Environment (Highly Recommended)**
+   ```bash
+   python -m venv venv
+   # On Windows:
+   venv\Scripts\activate
+   # On macOS/Linux:
+   source venv/bin/activate
+   ```
+
+3. **Install Dependencies**
    ```bash
    pip install -r requirements.txt
    ```
 
-## Installation (Docker Method - Recommended)
-
-If you prefer not to manually install Python or manage libraries, you can use Docker.
-Ensure **Docker Desktop** is installed on your machine.
-
-1. Open a terminal in the project folder.
-2. Run the following command:
-   ```bash
-   docker-compose up -d
-   ```
-3. The system will automatically download the operating system environment, install dependencies, and start the server. You can immediately open your browser at `http://localhost:5500`.
-
-## Run the Application (Without Docker)
-
-1. Navigate to the `src` directory:
+4. **Run the Application**
    ```bash
    cd src
-   ```
-
-2. Start the Flask server:
-   ```bash
    python app.py
    ```
 
-3. Open your web browser and go to the following link:
-   **http://127.0.0.1:5500**
+5. **Access the Web App**
+   Open your browser and navigate to: [http://localhost:5500](http://localhost:5500)
 
-## Usage Guide
-1. On the **Dashboard** page, click **Upload Image** or **Upload Folder** to upload blood cell images (JPG/PNG format).
-2. Click the **Analyze Images** button. The system will take a few seconds to process the images using the AI model.
-3. Once completed, you will be redirected to the **Scanned Results** page to view whether the cell is Infected or Uninfected.
-4. Previous results are automatically saved and tracked on this page.
+---
+
+## 💡 How to Use
+1. On the **Dashboard**, click **Upload Image** or **Upload Folder** to provide blood smear images (JPG/PNG).
+2. Click **Analyze Images**. The AI model will process each image.
+3. The results page will display the diagnosis:
+   - **INFECTED** (Malaria parasite detected - visual highlights will be added).
+   - **UNINFECTED** (Healthy cell).
+   - **NON_BLOOD** (Image is not recognized as a valid blood cell).
+

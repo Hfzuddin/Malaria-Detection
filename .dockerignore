@@ -1,0 +1,13 @@
+.git/
+.gitignore
+.vscode/
+venv/
+.venv/
+env/
+__pycache__/
+*.pyc
+processed_images/
+Testting/
+results/
+docker-compose.yml
+README.md
